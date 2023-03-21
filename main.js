@@ -3,7 +3,7 @@ document.querySelector('#push').onclick = function(){
         alert("Escribe una tarea")
     }
     else{
-       const push = () =>  document.querySelector('#tasks').innerHTML 
+        document.querySelector('#tasks').innerHTML 
         += `
             <div class="task">
                 <span id="taskname">
@@ -28,10 +28,22 @@ document.querySelector('#push').onclick = function(){
                 this.classList.toggle('completed')
             }
         }
-        document.getElementById('enter').onkeydown = function(e){
-            if(e.keyCode == 13){
-            push()
-            }
-        }
+        document.querySelector("#newtask input").value = ""
+    }
+}
+document.getElementById('enter').onkeydown = function(e){
+    if(e.keyCode == 13){
+          document.querySelector('#tasks').innerHTML 
+        += `
+            <div class="task">
+                <span id="taskname">
+                ${document.querySelector('#newtask input').value}
+                </span>
+                <button class="delete">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+            </div>
+        `
+        document.querySelector("#newtask input").value = ""
     }
 }
