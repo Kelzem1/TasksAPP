@@ -1,0 +1,102 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(
+        135deg,
+        rgba(68, 1, 122, 0.74),
+        rgba(12, 12, 12, 0.884)
+    );
+}
+
+.container{
+    width: 40%;
+    min-width: 450px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 30px 40px;
+}
+
+#newtask{
+    background-color: rgb(247, 247, 247);
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+#newtask input{
+    width: 70%;
+    height: 45px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    border: 2px solid rgb(226, 226, 226);
+    padding: 12px;
+    color: rgb(40, 1, 66);
+    font-weight: 400;
+    position: relative;
+    border-radius: 5px;
+}
+#newtask input:focus{
+    outline: none;
+    border-color: rgb(121, 0, 219);
+}
+#newtask button{
+    position: relative;
+    float: right;
+    width: 20%;
+    height: 45px;
+    padding: 2px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: rgb(121, 0, 219);
+    border: none;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+#tasks{
+    background-color: whitesmoke;
+    padding: 30px 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    width: 100%;
+}
+.task{
+    background-color: rgb(144, 95, 223);
+    opacity: 90%;
+    color: aliceblue;
+    height: 60px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.task button{
+    background-color: rgb(121, 0, 219);
+    color: aliceblue;
+    height: 100%;
+    width: 40px;
+    padding: 2px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.completed{
+    text-decoration: line-through;
+}
