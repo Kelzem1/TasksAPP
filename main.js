@@ -3,7 +3,7 @@ document.querySelector('#push').onclick = function(){
         alert("Escribe una tarea")
     }
     else{
-        document.querySelector('#tasks').innerHTML 
+       const push = () =>  document.querySelector('#tasks').innerHTML 
         += `
             <div class="task">
                 <span id="taskname">
@@ -28,6 +28,10 @@ document.querySelector('#push').onclick = function(){
                 this.classList.toggle('completed')
             }
         }
-        document.querySelector("#newtask input").value = ""
+        document.getElementById('enter').onkeydown = function(e){
+            if(e.keyCode == 13){
+            push()
+            }
+        }
     }
 }
